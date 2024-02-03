@@ -1,51 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codingame worker</title>
-    <style>
-      h1 {
-        font-size: 24px;
-        color: #333;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      
-      h2 {
-        font-size: 16px;
-        color: #666;
-        text-align: center;
-        margin-bottom: 20px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codingame worker</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<h1>Codingame Solver</h1>
+<h2>(BOT)</h2>
 
-      button:hover {
-        cursor: pointer;
-      }
-    </style>
-  </head>
-    <body style="width: 300px">
-      <h1>Codingame Solver</h1>
-      <h2>(jaime la nature)</h2>
-
-      <div style="display: flex; align-items: center;">
-        <input
+<div class="api-key">
+  <label for="apiKey">OpenAI API key:</label>
+  <input
           id="apiKey"
           type="text"
-          style="border: 1px solid #ccc; padding: 10px; flex-grow: 1;"
-          placeholder="OpenAI API key"
-        />
-        <button id="resetApiKey" style="background-color: #e0e0e0; color: black; border: none; padding: 10px; margin-left: 10px">Reset</button>
-      </div>
-      <p id="apiKeyStatus" style="color: red;"></p>
+          placeholder="Enter OpenAI API key"
+  />
+  <button id="resetApiKey">Reset</button>
+</div>
+<p id="apiKeyStatus"></p>
 
-      <div style="display: flex; align-items: center; margin-top: 10px;">
-        <button id="solveCoding" style="background-color: #4caf50; color: white; border: none; padding: 10px; margin-right: 10px">Coding Challenge</button>
-        <button id="solveQCM" style="background-color: #f44336; color: white; border: none; padding: 10px; margin-right: 10px">QCM</button>
-        <button id="solveGeneric" style="background-color: #2196f3; color: white; border: none; padding: 10px;">Generic</button>
-      </div>
+<div class="buttons">
+  <button id="solveCoding" class="btn-solve btn-coding">Coding Challenge</button>
+  <button id="solveQCM" class="btn-solve btn-qcm">QCM</button>
+  <button id="solveGeneric" class="btn-solve btn-generic">Generic</button>
+</div>
 
-      <script type="module" crossorigin src="/index.js"></script>    
-  </body>
+<script type="module" crossorigin src="index.js"></script>
+</body>
 </html>
